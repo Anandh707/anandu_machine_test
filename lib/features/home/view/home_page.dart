@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:interview1/features/cart/provider/cart_provider.dart';
 import 'package:interview1/features/home/provider/home_provider.dart';
 
 class HomePage extends ConsumerWidget {
@@ -51,7 +52,7 @@ class HomePage extends ConsumerWidget {
                                 disabledBackgroundColor: Colors.grey[900],
                                 disabledForegroundColor: Colors.white,
                               ),
-                              child: const Text("\$ 499"),
+                              child: Text("\$ ${data.price}"),
                             ),
                           ],
                         ),
@@ -76,7 +77,9 @@ class HomePage extends ConsumerWidget {
                     ),
                     const SizedBox(width: 10),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        ref.read(cartProvider.notifier).addToCart(data);
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.deepPurple[800],
                         foregroundColor: Colors.white,
