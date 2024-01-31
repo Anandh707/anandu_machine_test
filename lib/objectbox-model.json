@@ -26,9 +26,33 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "2:8502063797534322624",
+      "lastPropertyId": "3:6898320536743743687",
+      "name": "HistoryEntity",
+      "properties": [
+        {
+          "id": "1:8058193349902382877",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6506170606543696125",
+          "name": "imageUrl",
+          "type": 9
+        },
+        {
+          "id": "3:6898320536743743687",
+          "name": "price",
+          "type": 6
+        }
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "1:4463594213801753431",
+  "lastEntityId": "2:8502063797534322624",
   "lastIndexId": "0:0",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:interview1/features/cart/provider/cart_provider.dart';
+import 'package:interview1/features/history/provider/history_provider.dart';
 import 'package:interview1/features/home/provider/home_provider.dart';
 
 class HomePage extends ConsumerWidget {
@@ -66,6 +67,7 @@ class HomePage extends ConsumerWidget {
                     ElevatedButton(
                       onPressed: () {
                         ref.invalidate(getpostProvider);
+                        ref.read(historyProvider.notifier).addItem(data);
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.grey[900],
